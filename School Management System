@@ -1,0 +1,43 @@
+class Person {
+    constructor(name, sex, age){
+        this.name=name;
+        t=sex;
+        this.age=age;
+    }his.sex
+
+    displayDetails(){
+        console.log('Name: ${this.name}');
+        console.log('Gender: ${this.sex}');
+        console.log('Age: ${this.age}');
+    }
+}
+
+
+class Student extends Person {
+    constructor(name, sex, age, studentId, course){
+        super(name, sex, age)
+        this.studentId=studentId;
+        this.course=course;
+    }
+
+    displayStudentDetails(){
+        this.displayDetails();
+        console.log('Student ID: ${this.studentId}');
+        console.log('Course: ${this.course}');
+    }
+}
+
+
+class Teacher extends Person {
+    constructor(name, sex, age, teacherId, subject){
+        super(name, sex, age);
+        this.teacherId=teacherId;
+        this.subject=subject;
+    }
+
+    displayTeacherDetails(){
+        this.displayDetails();
+        console.log('Teacher ID: ${this.teacherId}');
+        console.log('Subject: ${this.subject}');
+    }
+}
